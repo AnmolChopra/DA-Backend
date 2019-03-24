@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Change Password</title>
+</head>
+<body>
+  <form [formGroup]="oldForm"(ngSubmit)="oldF()">
+    <!-- <label for="name">UserName</label>
+    <input type="text" formControlName="name"> -->
+      <label for="old">Old Password</label>
+      <input type="text" formControlName="old">
+      <label for="new">New Password</label>
+      <input type="text" formControlName="pass">
+      <button type="submit">Submit</button>
+  </form>
+  <!-- <form [formGroup]="newForm" (ngSubmit)="newF()">
+      <label for="new">New Password</label>
+      <input type="text" formControlName="newp">
+      <button type="submit">Submit</button>
+  </form> -->
+
+</body>
+</html>

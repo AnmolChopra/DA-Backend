@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Add Topic</title>
+</head>
+<body>
+  <form [formGroup]="addForm" (ngSubmit)="add()">
+      <label for="topicname">Topic Name</label>
+      <input type="text" formControlName="topicname">
+      <div *ngIf="addForm.controls['topicname'].invalid && addForm.controls['topicname'].touched && addForm.controls['topicname'].dirty">
+          Enter TopicName
+        </div>
+
+          <label for="upload">Upload</label>
+          <input type="file" (change)="onSubmitEvent($event)">
+          <button type="submit">Submit</button>
+  </form>
+          <h1> Quiz Questions</h1>
+<a routerLink='./addquiz7'>Add Quiz</a>
+</body>
+</html>
+<!-- <a routerLink='./addquiz7'>Add Quiz</a> -->
+<router-outlet></router-outlet>

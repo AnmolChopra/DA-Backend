@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Add Teacher</title>
+</head>
+<body>
+  <form [formGroup]="addtech" (ngSubmit)="addt()">
+    <label for="username">UserName</label>
+    <input type="text" formControlName="username">
+    <div *ngIf="addtech.controls['username'].invalid && addtech.controls['username'].touched && addtech.controls['username'].dirty">
+        Enter UserName
+      </div>
+
+      <label for="email">Email</label>
+      <input type="email" formControlName="email">
+      <div *ngIf="addtech.controls['email'].invalid && addtech.controls['email'].touched && addtech.controls['email'].dirty">
+          Enter Password
+        </div>
+      <label for="password">Password</label>
+      <input type="password" formControlName="password">
+      <div *ngIf="addtech.controls['password'].invalid && addtech.controls['password'].touched && addtech.controls['password'].dirty">
+          Enter Password
+        </div>
+        <button type="submit">Register</button>
+  </form>
+  
+</body>
+</html>

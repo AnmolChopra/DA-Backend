@@ -1,0 +1,18 @@
+<form [formGroup]="addquiz" (ngSubmit)="addqu()">
+  <label for="question">Question</label>
+  <input type="text" formControlName="question">
+  <label for="op1">Option 1</label>
+  <input type="text" formControlName="op1">
+  <label for="op2">Option 2</label>
+  <input type="text" formControlName="op2">
+  <label for="op3">Option 3</label>
+  <input type="text" formControlName="op3">
+  <label for="op4">Option 4</label>
+  <input type="text" formControlName="op4">
+  <label for="correctop">Correct Option</label>
+  <input type="text" formControlName="correctop">
+  <select formControlName="topicname">
+    <option *ngFor="let f of fetch">{{f.topicname}}</option>
+  </select>
+  <button type="submit">Submit</button>
+</form>

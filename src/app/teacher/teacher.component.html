@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Admin</title>
+</head>
+<body>
+  <div *ngIf="errMsg">{{errMsg}}</div>
+  <form [formGroup]="teacherForm" (ngSubmit)="techLogin()">
+    <label for="username">UserName</label>
+    <input type="text" formControlName="username">
+    <div *ngIf="teacherForm.controls['username'].invalid && teacherForm.controls['username'].touched && teacherForm.controls['username'].dirty">
+      Enter UserName
+    </div>
+
+
+    <label for="password">Password</label>
+    <input type="password" formControlName="password">
+    <div *ngIf="teacherForm.controls['password'].invalid && teacherForm.controls['password'].touched && teacherForm.controls['password'].dirty">
+      Enter Password
+    </div>
+    <button type="submit">Login</button>
+  </form>
+  <a routerLink="../forgetpass">Forget Password</a>
+</body>
+</html>

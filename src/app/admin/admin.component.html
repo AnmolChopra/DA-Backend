@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Admin</title>
+</head>
+<body>
+  <div *ngIf="errMsg">{{errMsg}}</div>
+  <form [formGroup]="adminForm" (ngSubmit)="adminLogin()">
+    <label for="username">UserName</label>
+    <input type="text" formControlName="username">
+    <div *ngIf="adminForm.controls['username'].invalid && adminForm.controls['username'].touched && adminForm.controls['username'].dirty">
+      Enter UserName
+    </div>
+    <label for="password">Password</label>
+    <input type="password" formControlName="password">
+    <div *ngIf="adminForm.controls['password'].invalid && adminForm.controls['password'].touched && adminForm.controls['password'].dirty">
+      Enter Password
+    </div>
+    <button type="submit">Login</button>
+  </form>
+</body>
+</html>

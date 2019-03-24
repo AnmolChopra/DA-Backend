@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Add Topic</title>
+</head>
+<body>
+  <form [formGroup]="addForm" (ngSubmit)="add()">
+      <label for="topicname">Topic Name</label>
+      <input type="text" formControlName="topicname">
+      <div *ngIf="addForm.controls['topicname'].invalid && addForm.controls['topicname'].touched && addForm.controls['topicname'].dirty">
+          Enter TopicName
+        </div>
+
+          <label for="upload">Upload</label>
+          <input type="file" (change)="onSubmitEvent($event)">
+          <button type="submit">Submit</button>
+  </form>
+          <h1> Quiz Questions</h1>
+<!-- <ol>
+  <li>
+          <label for="question1">Question1</label>
+          <input type="text" formControlName="question1">
+          <label for="op1">Option 1</label>
+          <input type="text" formControlName="ques1op1">
+          <label for="op2">Option 2</label>
+          <input type="text" formControlName="ques1op2">
+          <label for="op3">Option 3</label>
+          <input type="text" formControlName="ques1op3">
+          <label for="op4">Option 4</label>
+          <input type="text" formControlName="ques1op4">
+          <label for="correctop">Correct Option</label>
+          <input type="text" formControlName="correctop1">
+</li>
+<li>
+          <label for="question2">Question2</label>
+          <input type="text" formControlName="question2">
+          <label for="op1">Option 1</label>
+          <input type="text" formControlName="ques2op1">
+          <label for="op2">Option 2</label>
+          <input type="text" formControlName="ques2op2">
+          <label for="op3">Option 3</label>
+          <input type="text" formControlName="ques2op3">
+          <label for="op4">Option 4</label>
+          <input type="text" formControlName="ques2op4">
+          <label for="correctop">Correct Option</label>
+          <input type="text" formControlName="correctop2">
+</li>
+<li>
+          <label for="question3">Question3</label>
+          <input type="text" formControlName="question3">
+          <label for="op1">Option 1</label>
+          <input type="text" formControlName="ques3op1">
+          <label for="op2">Option 2</label>
+          <input type="text" formControlName="ques3op2">
+          <label for="op3">Option 3</label>
+          <input type="text" formControlName="ques3op3">
+          <label for="op4">Option 4</label>
+          <input type="text" formControlName="ques3op4">
+          <label for="correctop">Correct Option</label>
+          <input type="text" formControlName="correctop3">
+</li>
+<li>
+          <label for="question4">Question4</label>
+          <input type="text" formControlName="question4">
+          <label for="op1">Option 1</label>
+          <input type="text" formControlName="ques4op1">
+          <label for="op2">Option 2</label>
+          <input type="text" formControlName="ques4op2">
+          <label for="op3">Option 3</label>
+          <input type="text" formControlName="ques4op3">
+          <label for="op4">Option 4</label>
+          <input type="text" formControlName="ques4op4">
+          <label for="correctop">Correct Option</label>
+          <input type="text" formControlName="correctop4">
+</li>
+<li>
+           <label for="question5">Question5</label>
+          <input type="text" formControlName="question5">
+          <label for="op1">Option 1</label>
+          <input type="text" formControlName="ques5op1">
+          <label for="op2">Option 2</label>
+          <input type="text" formControlName="ques5op2">
+          <label for="op3">Option 3</label>
+          <input type="text" formControlName="ques5op3">
+          <label for="op4">Option 4</label>
+          <input type="text" formControlName="ques5op4">
+          <label for="correctop">Correct Option</label>
+          <input type="text" formControlName="correctop5">
+</li>
+          </ol>
+
+
+  </form> -->
+  <a routerLink="./addquiz">Add Quiz</a>
+
+      <!-- <label for="question">Question</label>
+      <input type="text" formControlName="question">
+      <label for="op1">Option 1</label>
+      <input type="text" formControlName="op1">
+      <label for="op2">Option 2</label>
+      <input type="text" formControlName="op2">
+      <label for="op3">Option 3</label>
+      <input type="text" formControlName="op3">
+      <label for="op4">Option 4</label>
+      <input type="text" formControlName="op4">
+      <label for="correctop">Correct Option</label>
+      <input type="text" formControlName="correctop">
+      <button type="submit">Submit</button> -->
+   
+</body>
+</html>
+<router-outlet></router-outlet>

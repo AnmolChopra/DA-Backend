@@ -1,0 +1,30 @@
+
+<a routerLink='./addtopic11'>Add Topic</a>
+
+<div>
+  <table border="1px">
+    <tr>
+      <th>Topic Name</th>
+      <th>Upload</th>
+      <th>Question </th>
+      <th>Option1</th>
+      <th>Option2</th>
+      <th>Option3</th>
+      <th>Option4</th>
+      <th>Correct Option</th>
+    </tr>
+    <tr *ngFor="let f of fetch">
+      <th>{{f.topicname}}</th>
+      <th><img src="http://localhost:1245/myimages/{{f.upload}}" width="50" height="50"/></th>
+      <th>{{f.values.question}}</th>
+      <th>{{f.values.op1}}</th>
+      <th>{{f.values.op2}}</th>
+      <th>{{f.values.op3}}</th>
+      <th>{{f.values.op4}}</th>
+      <th>{{f.values.correctop}}</th>
+    </tr>
+  </table>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>
